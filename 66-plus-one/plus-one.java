@@ -14,7 +14,9 @@ class Solution {
         
         int[] result = new int[n + 1];
         result[0] = 1; 
-       
+        // for(int i=1;i<n;i++){
+        //     arr[i]=0;
+        // }
 
 
         return result;   
