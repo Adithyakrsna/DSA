@@ -5,12 +5,12 @@ class Solution {
         
         int count = 0;
         for(int i = 1 ;i<n;i+=2){
-            arr[i] = arr[i-1] ^ arr[i];
-            arr[i-1] = arr[i-1] ^ arr[i];
-            arr[i] = arr[i-1] ^ arr[i];
-            // int temp = arr[i];
-            // arr[i] = arr[i-1];
-            // arr[i-1]  = temp;
+            // arr[i] = arr[i-1] ^ arr[i];
+            // arr[i-1] = arr[i-1] ^ arr[i];
+            // arr[i] = arr[i-1] ^ arr[i];
+            int temp = arr[i];
+            arr[i] = arr[i-1];
+            arr[i-1]  = temp;
         }
         return arr;
     }
