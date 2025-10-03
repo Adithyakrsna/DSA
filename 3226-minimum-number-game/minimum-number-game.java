@@ -1,19 +1,16 @@
 class Solution {
-    public int[] numberGame(int[] nums) {
-        int n = nums.length;
-        int arr [] = new int [n];
-        Arrays.sort(nums);
-        int i = 0 ;
-        int j= 1;
+    public int[] numberGame(int[] arr) {
+        int n = arr.length;
+        Arrays.sort(arr);
+        
         int count = 0;
-        while(j<n ){
-            arr[count]= nums[j];
-            count++;
-            arr[count]= nums[i];
-            count++;
-            i+=2;
-            j+=2;
-            
+        for(int i = 1 ;i<n;i+=2){
+            arr[i] = arr[i-1] ^ arr[i];
+            arr[i-1] = arr[i-1] ^ arr[i];
+            arr[i] = arr[i-1] ^ arr[i];
+            // int temp = arr[i];
+            // arr[i] = arr[i-1];
+            // arr[i-1]  = temp;
         }
         return arr;
     }
