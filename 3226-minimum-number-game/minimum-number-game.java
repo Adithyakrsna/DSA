@@ -3,7 +3,7 @@ class Solution {
         int n = arr.length;
         Arrays.sort(arr);
         
-        int count = 0;
+       
         for(int i = 1 ;i<n;i+=2){
             // arr[i] = arr[i-1] ^ arr[i];
             // arr[i-1] = arr[i-1] ^ arr[i];
