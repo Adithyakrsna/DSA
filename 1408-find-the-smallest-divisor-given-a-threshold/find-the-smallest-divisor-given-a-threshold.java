@@ -3,12 +3,12 @@ class Solution {
         int low = 1;
         int n = arr.length;
         if (n > limit) return -1;
-        int high = 0;
+        int high = 1000000;
         
 
-        for(int i = 0 ;i <n;i++){
-            high = Math.max(high,arr[i]);
-        }
+        // for(int i = 0 ;i <n;i++){
+        //     high = Math.max(high,arr[i]);
+        // }
 
         while(low<= high){
             int mid = low+(high-low)/2;
